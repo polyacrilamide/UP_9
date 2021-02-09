@@ -1,0 +1,12 @@
+#1
+commit 28f9c296122539a966ff1c80301fa02f8a38b105 (HEAD -> master)
+Author: Ari <arinapogosjan@gmail.com>
+Date:   Tue Feb 9 17:40:16 2021 +0300
+
+    add status.txt
+
+commit 08f4113ca2d69a7ccbe6b39a18c4e3aa6aef9c70
+Author: Ari <arinapogosjan@gmail.com>
+Date:   Tue Feb 9 17:37:01 2021 +0300
+
+    add .gitignore
