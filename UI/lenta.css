@@ -1,0 +1,242 @@
+body,html{
+    margin:0px;
+    padding:0px;
+    width:100%;
+    height:100%;
+}
+body{
+    overflow: hidden;
+}
+
+.wrapper{
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 5% 92% 3%;
+    grid-template-areas:
+"header header "
+"left right"
+"footer footer"
+}
+.name_surname{
+    display:inline-block;
+    float: left;
+    margin: 8% 0px 0px 6%;
+    font-weight: bold;
+    font-family: ‘Century Gothic’, sans-serif;
+}
+
+
+.header{
+    background-color: #328050;
+    color: #b8deb6;
+    font-weight: bold;
+    text-align: center;
+    font-family: ‘Century Gothic’, sans-serif;
+    margin-bottom:10px;
+}
+.footer{
+    background-color: #328050;
+    color: #b8deb6;
+    text-align: left;
+    font-family: ‘Century Gothic’, sans-serif;
+}
+
+.left{
+    border-radius: 10px;
+    vertical-align: bottom;
+    background: #B0FFCE;
+    height: 100%;
+    color: #133612;
+    font-family: ‘Century Gothic’, sans-serif;
+    padding:4px;
+}
+
+.register{
+    display: block;
+    border: #133612 1px solid;
+    border-radius: 5px;
+    bottom: 10%;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    color: #133612;
+    font-size: 20px;
+    float: left;
+}
+.log_out{
+    display: block;
+    border: #133612 1px solid;
+    border-radius: 5px;
+    bottom: 10%;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    color: #133612;
+    font-size: 20px;
+    float: left;
+}
+.log_in{
+    display: block;
+    border: #133612 1px solid;
+    border-radius: 5px;
+    bottom: 10%;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    color: #133612;
+    font-size: 20px;
+    float: left;
+}
+.post{
+    display: inline-block;
+    border: #133612 1px solid;
+    border-radius: 5px;
+    bottom: 10%;
+    text-align: center;
+    text-decoration: none;
+    color: #133612;
+    font-size: 20px;
+    float: left;
+    margin-top: 5%;
+}
+
+fieldset{
+    border: 2px solid #133612;
+    margin-top: 40%;
+}
+
+.left span.bl{
+    display: block;
+}
+
+.left span.bl label{
+    display: block;
+}
+.right-list-block{
+    overflow-y: scroll;
+    height: calc(100% - 20px);
+    margin-left: 1%;
+}
+.right-list{
+    display:grid;
+    grid-template-columns: 49% 49%;
+    grid-gap: 4px;
+}
+@media  (max-width: 768px) {
+    .right-list{
+        grid-template-columns: 100%;
+        overflow-y:hidden;
+    }
+}
+
+.item{
+    background-color: #67d98f;
+    border-radius: 10px;
+}
+
+.item-top{
+    height:50px;
+    color:white;
+}
+
+.item-top img{
+    border-radius: 10px;
+    padding:4px;
+    margin:4px;
+    width:30px;
+    float:left;
+}
+.item-top .fio{
+    font-family: ‘Century Gothic’, sans-serif;
+    float:left;
+    display:inline-block;
+    margin:3% 0px 0px 2%;
+    color: #133612;
+}
+.item-top .date{
+    font-family: ‘Century Gothic’, sans-serif;
+    float:right;
+    margin: 3% 1% 0px 0px;
+    color: #133612;
+}
+.item-middle{
+    border-radius: 10px;
+    background-color:  #B0FFCE;
+    margin:1% 1% 0px 1%;
+    display:grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+"photo discriptionright"
+"photo discriptionright"
+"photo text"
+;
+    height: calc(100% - 100px);
+
+}
+.item .text{
+    width: 100%;
+    display:grid;
+    grid-template-columns: 30% 60%;
+}
+
+.item-middle .photo{
+    grid-area: photo;
+    height: 100%;
+    padding: 2px;
+}
+
+.item-middle .p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: ‘Century Gothic’, sans-serif;
+    color: #133612;
+}
+
+.item-middle .i{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    text-align: left;
+    font-family: ‘Century Gothic’, sans-serif;
+    color: #133612;
+
+}
+.item-middle .discription{
+    grid-area: discriptionright;
+    font-family: ‘Century Gothic’, sans-serif;
+    color: #133612;
+}
+
+.item-middle .photo img{
+    width:100%;
+    height: 98%;
+    border-radius: 10px;
+}
+.item-bottom img{
+    width:27px;
+    margin: 10px;
+}
+.item-bottom{
+    text-align:left;
+    height: 5%;
+}
+
+.loading{
+    position: absolute;
+    height: 5%;
+    width: 10%;
+    top: 90%;
+    left: 55%;
+    text-align: center;
+    cursor: pointer;
+    background-color: #ccecd7;
+    border-radius: 10px;
+    border:1px solid darkslategrey;
+    font-family: ‘Century Gothic’, sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+    color: #3a6548;
+
+}

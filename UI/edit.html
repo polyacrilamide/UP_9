@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>Фотопортал</title>
+    <link rel="stylesheet" href = "edit.css">
+</head>
+<body>
+<div class = "wrapper">
+    <div class = "center" style="grid-area: center">
+        <fieldset>
+            <legend >Редактирование:</legend>
+        <span class="bl"><label for="name">Название</label><input type="text" id="name"></span>
+        <span class="bl"><label for="country">Страна</label><input type="text" id="country"></span>
+        <span class="bl"><label for="dosage">Дозировка</label><input type="text" id="dosage"></span>
+        <span class="bl"><label for="price">Цена</label><input type="text" id="price"></span>
+        <span class="bl"><label for="photoLink">Ссылка на фото</label><input type="text" id="photoLink"></span>
+        <span class="bl"><input type="button" value="Сохранить пост" onclick="Save(this)"></span>
+        </fieldset>
+        <a href="lenta.html" class="green">Перейти в ленту постов</a>
+    </div>
+</div>
+</body>
+<script src="lenta_photo_array.js"></script>
+<script src="viewList.js"></script>
+<script src="postList.js"></script>
+<script src="listener.js"></script>
+<script src="load.js"></script>
+<script src="edit.js"></script>
+</html>

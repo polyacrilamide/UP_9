@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>Фотопортал</title>
+    <link rel="stylesheet" href = "sign_in.css">
+</head>
+<body>
+<div class = "wrapper">
+    <div class = "center" style="grid-area: center">
+        <div class="log">Логин</div>
+        <input type="text" placeholder="Введите логин" id="login" value="Иванов Иван"></input>
+        <div class="pass">Пароль</div>
+        <input type="text" placeholder="Введите пароль" id="password"></input>
+        <div></div>
+        <input type="submit" value="Отправить" onclick="goToPage()"></input>
+    </div>
+    <script src="lenta_photo_array.js"></script>
+    <script>
+        function goToPage(){
+            let login=document.getElementById('login').value;
+            if(ArrOfNames.includes(login)===false) {
+                alert('Пользователя с данным именем не существует.');
+                return;
+            }
+            document.location.href="lenta.html?user="+login;
+        }
+    </script>
+</div>
+</body>

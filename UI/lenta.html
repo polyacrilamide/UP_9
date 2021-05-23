@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang ="ru">
+<head>
+    <meta charset = "UTF-8">
+    <title>Фотопортал</title>
+    <link rel="stylesheet" href = "lenta.css">
+</head>
+<body>
+<div class = "wrapper">
+    <div class = "header" style="grid-area: header">
+        Фармацевтический фото портал
+    </div>
+    <div class="left" style="grid-area: left" id="top">
+        <img src="images/account.png" width="40px" height="40px" style="float:left; margin:5% 0px 0px 5%;">
+        <span class="name_surname">Имя</span>
+        <fieldset>
+        <legend >Фильтрация:</legend>
+        <span class="bl"><label for="name">Название</label><input type="text" id="name"></span>
+        <span class="bl"><label for="country">Страна</label><input type="text" id="country"></span>
+        <span class="bl"><label for="dosage">Дозировка</label><input type="text" id="dosage"></span>
+        <span class="bl"><label for="price">Цена</label><input type="number" id="price"></span>
+        <span class="bl"><input type="submit" value="Отправить" onclick="Sorting(this)"></span>
+        <span class="bl"><input type="submit" value="Очистить" onclick="SortingClear()"></span>
+        </fieldset>
+    </div>
+    <div class="right" style="grid-area: right">
+        <div class="right-list-block">
+            <div class="right-list">
+             <!--   <div class="item">
+                    <div class="item-top">
+                        <img src="images/account.png">
+                        <span class="fio">Анна Вадимовна</span>
+                        <span class="date">23.05.2005</span>
+                    </div>
+                    <div class="item-middle">
+                        <div class="photo">
+                            <img src="images/img4.png">
+                        </div>
+                        <div class="text">
+                        <div class="p">Название:</div>
+                        <div class="i">АЦЦ</div>
+
+                        <div class="p">Страна:</div>
+                        <div class="i">Германия</div>
+
+                        <div class="p">Дозировка:</div>
+                        <div class="i">300-400 мг/день</div>
+
+                        <div class="p">Цена:</div>
+                        <div class="i">10</div>
+                        </div>
+                        <div class="discription">Таблетки шипучие белого цвета, круглые, плоскоцилиндрические.
+                            Применяется при в заболеваниях органов дыхания, сопровождающихся образованием густой и трудноотделяемой мокроты.</div>
+                    </div>
+                    <div class="item-bottom">
+                        <img src="images/like.png" class="item_like" onclick="Like(this)">
+                        <img src="images/delete.png">
+                        <a href="send_email.html"><img src="images/send.png"></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-top">
+                        <img src="images/account.png">
+                        <span class="fio">Сергей Артемович</span>
+                        <span class="date">12.11.2011</span>
+                    </div>
+                    <div class="item-middle">
+                        <div class="photo">
+                            <img src="images/img3.png">
+                        </div>
+                        <div class="text">
+                        <div class="p">Название:</div>
+                        <div class="i">Аллеркапс</div>
+
+                        <div class="p">Страна:</div>
+                        <div class="i">Беларусь</div>
+
+                        <div class="p">Дозировка:</div>
+                        <div class="i">10 мг/день</div>
+
+                        <div class="p">Цена:</div>
+                        <div class="i">3</div>
+                        </div>
+                        <div class="discription">Капсулы твердые желатиновые цилиндрической формы с полусферическими концами белого цвета.
+                            Применяется для снятия симптомов аллергических реакций.</div>
+                    </div>
+                    <div class="item-bottom">
+                        <img src="images/like.png" class="item_like" onclick="Like(this)">
+                        <img src="images/delete.png">
+                        <a href="send_email.html"><img src="images/send.png"></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-top">
+                        <img src="images/account.png">
+                        <span class="fio">Ирина Алексеевна</span>
+                        <span class="date">05.09.2006</span>
+                    </div>
+                    <div class="item-middle">
+                        <div class="photo">
+                            <img src="images/img2.png">
+                        </div>
+                        <div class ="text">
+                        <div class="p">Название:</div>
+                        <div class="i">Арпетол</div>
+
+                        <div class="p">Страна:</div>
+                        <div class="i">Беларусь</div>
+
+                        <div class="p">Дозировка:</div>
+                        <div class="i">200 мг/день</div>
+
+                        <div class="p">Цена:</div>
+                        <div class="i">10</div>
+                        </div>
+                        <div class="discription">Таблетки, покрытые оболочкой, белого цвета.
+                            Применяется для профилактики и лечения: грипп А и В, и другие ОРВИ.</div>
+                    </div>
+                    <div class="item-bottom">
+                        <img src="images/like.png" class="item_like" onclick="Like(this)">
+                        <img src="images/delete.png">
+                        <a href="send_email.html"><img src="images/send.png"></a>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-top">
+                        <img src="images/account.png">
+                        <span class="fio">Мария Ивановна</span>
+                        <span class="date">02.06.2010</span>
+                    </div>
+                    <div class="item-middle">
+                        <div class="photo">
+                            <img src="images/img1.png">
+                        </div>
+                        <div class ="text">
+                        <div class="p">Название:</div>
+                        <div class="i">Тропикамид</div>
+
+                        <div class="p">Страна:</div>
+                        <div class="i">Румыния</div>
+
+                        <div class="p">Дозировка:</div>
+                        <div class="i">1-2 капли</div>
+
+                        <div class="p">Цена:</div>
+                        <div class="i">5</div>
+                        </div>
+                        <div class="discription">Прозрачный бесцветный раствор.
+                            Применяется как мидриатик и циклоплегик, показанный для диагностических целей и в пред-и послеоперационных состояниях.</div>
+                    </div>
+                    <div class="item-bottom">
+                        <img src="images/like.png" class="item_like" onclick="Like(this)">
+                        <img src="images/delete.png">
+                        <a href="send_email.html"><img src="images/send.png"></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item-top">
+                        <img src="images/account.png">
+                        <span class="fio">Денис Аврамович</span>
+                        <span class="date">13.07.2015</span>
+                    </div>
+                    <div class="item-middle">
+                        <div class="photo">
+                            <img src="images/img5.png">
+                        </div>
+                        <div class="text">
+                        <div class="p">Название:</div>
+                        <div class="i">Маалокс</div>
+
+                        <div class="p">Страна:</div>
+                        <div class="i">Италия</div>
+
+                        <div class="p">Дозировка:</div>
+                        <div class="i">4-6 табл/день</div>
+
+                        <div class="p">Цена:</div>
+                        <div class="i">10</div>
+                        </div>
+                        <div class="discription">Таблетки белого цвета круглые, плоские, со скошенными краями, с гравировкой «Мх» с обеих сторон.
+                            Применяется для антацидной терапии при изжоге и гастроэзофагальном рефлюксе у пациентов старше 15 лет.</div>
+                    </div>
+                    <div class="item-bottom">
+                        <img src="images/like.png" class="item_like" onclick="Like(this)">
+                        <img src="images/delete.png">
+                        <a href="send_email.html"><img src="images/send.png"></a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="loading" onclick="showNewTenElements()"><span>Загрузить еще</span> </div>
+    </div>
+    <div class="footer" style="grid-area: footer"> ©2020-2021</div>
+
+</div>
+    <script  src="lenta_photo_array.js"></script>
+    <script src="viewList.js"></script>
+    <script  src="postList.js"></script>
+    <script src="listener.js"></script>
+    <script src="load.js"></script>
+    <script src="filter.js"></script>
+    <script>
+        var user = location.search.split('user=')[1];
+        if(user==undefined){
+            document.getElementById("top").innerHTML+='<a href="sign_in.html" class="log_in">Войти</a>';
+        }
+        else{
+            user=decodeURI(user);
+            document.getElementsByClassName("name_surname")[0].innerHTML=user;
+            document.getElementById("top").innerHTML+='<a href="edit.html?user='+user+'"class="post">Добавить пост</a>';
+            document.getElementById("top").innerHTML+='<a href="lenta.html" class="log_out">Выйти</a>';
+        }
+        Load();
+
+        Views.showTenEl(0, 10);
+
+        function SortingClear(){
+            document.getElementById("name").value='';
+            document.getElementById("country").value='';
+            document.getElementById("dosage").value='';
+            document.getElementById("price").value='';
+            Sorting();
+        }
+    </script>
+
+</body>
+</html>
