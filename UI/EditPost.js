@@ -12,6 +12,7 @@ function Init() {
                 break;
             }
         }
+        obj.author = user;
         document.getElementById("name").value = obj.name;
         document.getElementById("country").value = obj.country;
         document.getElementById("dosage").value = obj.dosage;
@@ -29,9 +30,8 @@ function Init() {
                 break;
             }
         }
-
         obj.id = id;
-        obj.author = document.getElementsByClassName("name_surname")[0].innerHTML;
+        obj.author = user;
         photoPostsSource.push(obj);
         photoPosts.push(obj);
         document.getElementById("name").value = ArrOfNames;
@@ -48,7 +48,7 @@ function Save(ss){
     obj.dosage = document.getElementById("dosage").value;
     obj.price = document.getElementById("price").value;
     obj.photoLink = document.getElementById("photoLink").value;
-    obj.author=user;
+    obj.author = user;
     console.log(obj);
     PP.saveToStorage();
     alert('Пост сохранен.')

@@ -194,12 +194,12 @@
     <div class="footer" style="grid-area: footer"> ©2020-2021</div>
 
 </div>
-    <script  src="lenta_photo_array.js"></script>
-    <script src="viewList.js"></script>
-    <script  src="postList.js"></script>
-    <script src="listener.js"></script>
-    <script src="load.js"></script>
-    <script src="filter.js"></script>
+    <script  src="PostArray.js"></script>
+    <script src="ViewList.js"></script>
+    <script  src="PostsList.js"></script>
+    <script src="Listener.js"></script>
+    <script src="LoadPosts.js"></script>
+    <script src="Filter.js"></script>
     <script>
         var user = location.search.split('user=')[1];
         if(user==undefined){
@@ -212,9 +212,7 @@
             document.getElementById("top").innerHTML+='<a href="lenta.html" class="log_out">Выйти</a>';
         }
         Load();
-
         Views.showTenEl(0, 10);
-
         function SortingClear(){
             document.getElementById("name").value='';
             document.getElementById("country").value='';
@@ -223,6 +221,5 @@
             Sorting();
         }
     </script>
-
 </body>
 </html>

@@ -4,9 +4,7 @@ function Sorting(tt) {
     if (document.getElementById("country").value.length > 0) filterConfig.country = document.getElementById("country").value;
     if (document.getElementById("dosage").value.length > 0) filterConfig.dosage = document.getElementById("dosage").value;
     if (document.getElementById("price").value.length > 0) filterConfig.price = document.getElementById("price").value;
-
     let result = [];
-
     let kkey = Object.keys(filterConfig);
 
     for (let i = 0; i < photoPosts.length; i++) {
@@ -17,9 +15,7 @@ function Sorting(tt) {
         if (sum == kkey.length)
             result.push(photoPosts[i]);
     }
-
     var dd = document.getElementsByClassName("right-list")[0];
-
     let tmp = "";
     for (let i = 0; i < result.length; i++) {
         tmp += Views.view(result[i]);

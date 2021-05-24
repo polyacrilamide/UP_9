@@ -7,7 +7,7 @@
 </head>
 <body>
 <div class = "wrapper">
-    <div class = "center" style="grid-area: center">
+    <div class = "center" style="grid-area: center" id ="top">
         <fieldset>
             <legend >Редактирование:</legend>
         <span class="bl"><label for="name">Название</label><input type="text" id="name"></span>
@@ -17,14 +17,18 @@
         <span class="bl"><label for="photoLink">Ссылка на фото</label><input type="text" id="photoLink"></span>
         <span class="bl"><input type="button" value="Сохранить пост" onclick="Save(this)"></span>
         </fieldset>
-        <a href="lenta.html" class="green">Перейти в ленту постов</a>
     </div>
 </div>
 </body>
-<script src="lenta_photo_array.js"></script>
-<script src="viewList.js"></script>
-<script src="postList.js"></script>
-<script src="listener.js"></script>
-<script src="load.js"></script>
-<script src="edit.js"></script>
+<script src="PostArray.js"></script>
+<script src="ViewList.js"></script>
+<script src="PostsList.js"></script>
+<script src="Listener.js"></script>
+<script src="LoadPosts.js"></script>
+<script src="EditPost.js"></script>
+<script>
+    var user = location.search.split('user=')[1];
+    user=decodeURI(user);
+    document.getElementById("top").innerHTML+=' <a href="lenta.html?user=' +user+' "class="green">Перейти в ленту постов</a>';
+</script>
 </html>

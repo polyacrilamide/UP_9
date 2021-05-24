@@ -32,7 +32,7 @@ class View {
                     '<a href="send_email.html"><img src="images/send.png"></a>';
          let el = document.getElementsByClassName("name_surname")[0];
          if (el.innerHTML ===post.author){
-                 tmp += '<a href="post_edit.html?guid=' + post.id + '"><img src="images/edit.png"></a>' +
+                 tmp += '<a href="edit.html?guid=' + post.id + '"><img src="images/edit.png"></a>' +
                  '<img src="images/delete.png" class="item_delete" onclick="del(this)">';
          }
         tmp += '</div>' + '</div>';
